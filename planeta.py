@@ -12,9 +12,9 @@ class Planeta(object):
         X, Y, Vx, Vy=self.y_actual
         G=M=1
         r=(X**2+Y**2)**(0.5)
-        Fx=-X*( G*M/r**3-2*self.alpha*G*M/r**4)     #Ecuaciones de movimiento donde fx y fy
-        Fy=-Y*( G*M/r**3-2*self.alpha*G*M/r**4)     #son las derivadas parciales del potencial
-        return [Vx, Vy, Fx, Fy]                                    #divididos por la masa para obtener aceleracion
+        Fx=-X*(G*M/r**3-2*self.alpha*G*M/r**4)     #Ecuaciones de movimiento donde fx y fy
+        Fy=-Y*(G*M/r**3-2*self.alpha*G*M/r**4)     #son las derivadas parciales del potencial
+        return [Vx, Vy, Fx, Fy]                             #divididos por la masa para obtener aceleracion
 
     def avanza_euler(self, h):
         '''

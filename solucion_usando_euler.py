@@ -12,7 +12,7 @@ y=[0]
 Ene=[p.EneActual]
 
 N=1        #Variable auxiliar para iterar
-while N<Pasos:                 #Aplica el metodo de euler definido en la clase planeta.
+while N<Pasos:                 #Aplica el metodo de euler explicito definido en la clase planeta.
     p.avanza_euler(h)
     N+=1
     x.append(p.y_actual[0])
